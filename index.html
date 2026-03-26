@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth bg-[#020202]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vesperix | Baju Boxy Bekasi Babelan - Clothing Brand Streetwear</title>
+    <meta name="description" content="Vesperix adalah clothing brand streetwear di Bekasi Babelan. Jual baju boxy/boxy tee heavy cotton premium. Lihat archive Vol 1 & Vol 2 dan order via WhatsApp.">
+    <meta name="keywords" content="baju boxy bekasi, baju boxy babelan, boxy tee bekasi, clothing brand bekasi, clothing brand babelan, streetwear bekasi, vesperix, baju boxy premium">
+    <meta name="author" content="Vesperix ID">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vesperix.id/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vesperix | Baju Boxy Bekasi Babelan">
+    <meta property="og:description" content="Clothing brand streetwear di Bekasi Babelan. Baju boxy/boxy tee heavy cotton premium.">
+    <meta property="og:url" content="https://vesperix.id/">
+    <meta property="og:image" content="https://vesperix.id/assets/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vesperix | Baju Boxy Bekasi Babelan">
+    <meta name="twitter:description" content="Clothing brand streetwear di Bekasi Babelan. Baju boxy/boxy tee heavy cotton premium.">
+    <meta name="twitter:image" content="https://vesperix.id/assets/og-image.jpg">
+    
+    <!-- Font eksklusif: Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Space Grotesk', 'sans-serif'] },
+                    colors: {
+                        vespink: '#FFB7C5',
+                        pureblack: '#000000',
+                        offblack: '#0a0a0a',
+                        graytext: '#666666',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Vesperix",
+            "url": "https://vesperix.id/",
+            "logo": "https://vesperix.id/assets/logo.png",
+            "sameAs": [
+                "https://www.instagram.com/vesperix.id",
+                "https://wa.me/6287882518531"
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Vesperix",
+            "url": "https://vesperix.id/",
+            "image": "https://vesperix.id/assets/og-image.jpg",
+            "telephone": "+62-878-8251-8531",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Babelan",
+                "addressRegion": "Bekasi",
+                "addressCountry": "ID"
+            },
+            "areaServed": "Bekasi",
+            "sameAs": [
+                "https://www.instagram.com/vesperix.id",
+                "https://wa.me/6287882518531"
+            ]
+        }
+    </script>
+
+    <!-- Custom High-End Styling & Cursor -->
+    <style>
+        body { 
+            background-color: #020202; color: #ffffff; 
+            overflow-x: hidden; -webkit-font-smoothing: antialiased; 
+        }
+        .h-screen-dvh { height: 100vh; height: 100dvh; }
+
+        /* ================= CUSTOM MOUSE CURSOR ================= */
+        @media (pointer: fine) {
+            body, a, button, .cursor-pointer { cursor: none !important; }
+        }
+        #cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px;
+            background-color: #FFB7C5; border-radius: 50%;
+            pointer-events: none; z-index: 10001;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s, transform 0.1s;
+        }
+        #cursor-follower {
+            position: fixed; top: 0; left: 0; width: 32px; height: 32px;
+            border: 1px solid rgba(255, 183, 197, 0.4); border-radius: 50%;
+            pointer-events: none; z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                        height 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                        background-color 0.4s, border-color 0.4s;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 10px; font-weight: 900; color: #000; letter-spacing: 0.1em;
+            overflow: hidden; text-transform: uppercase;
+        }
+        /* State saat kursor mengenai Link/Tombol */
+        body.hover-link #cursor-follower {
+            width: 50px; height: 50px;
+            background-color: rgba(255, 183, 197, 0.1);
+            border-color: #FFB7C5; backdrop-filter: blur(2px);
+        }
+        body.hover-link #cursor-dot { transform: translate(-50%, -50%) scale(0.5); }
+        
+        /* State saat kursor mengenai Foto Produk */
+        body.hover-view #cursor-follower {
+            width: 80px; height: 80px;
+            background-color: #FFB7C5; border-color: #FFB7C5;
+            mix-blend-mode: normal;
+        }
+        body.hover-view #cursor-follower::after { content: 'VIEW'; }
+        body.hover-view #cursor-dot { opacity: 0; }
+
+        /* Noise Halus */
+        .film-grain {
+            position: fixed; inset: 0; z-index: 999; pointer-events: none; opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Ambient Glow */
+        .aurora-bg {
+            background:
+                radial-gradient(600px 300px at 15% 10%, rgba(255, 183, 197, 0.08), transparent 60%),
+                radial-gradient(900px 420px at 85% 30%, rgba(255, 255, 255, 0.04), transparent 60%),
+                radial-gradient(700px 400px at 50% 90%, rgba(255, 183, 197, 0.06), transparent 60%);
+        }
+        .glow-ring {
+            position: absolute; inset: -30%; border-radius: 999px;
+            background: radial-gradient(circle, rgba(255, 183, 197, 0.15), transparent 55%);
+            filter: blur(20px); opacity: 0.7; pointer-events: none;
+        }
+        .scanlines {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 4px;
+        }
+
+        /* Animasi Melayang Mewah */
+        .glide-up { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .glide-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* Efek Outline Teks */
+        .text-outline { color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5); transition: -webkit-text-stroke 0.3s; }
+        .group:hover .text-outline { -webkit-text-stroke: 1px #FFB7C5; }
+
+        /* Image Slow Zoom Hover */
+        .img-container { overflow: hidden; position: relative; }
+        .img-container img { transition: transform 1.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .group:hover .img-container img { transform: scale(1.08); }
+
+        /* Image Overlay Gelap saat Hover */
+        .img-overlay { position: absolute; inset: 0; background-color: rgba(0,0,0,0.4); opacity: 0; transition: opacity 0.5s; z-index: 10; }
+        .group:hover .img-overlay { opacity: 1; }
+
+        /* SPA Transition */
+        .page { display: none; opacity: 0; transition: opacity 0.6s ease; }
+        .page.active { display: block; opacity: 1; }
+
+        /* Tab Filter Animasi */
+        .filter-btn { position: relative; padding-bottom: 4px; }
+        .filter-btn::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #FFB7C5; transition: width 0.3s ease; }
+        .filter-btn.active::after { width: 100%; }
+        .filter-btn.active { color: #fff; }
+        
+        .product-item { transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-item.hidden-item { display: none; opacity: 0; transform: scale(0.95) translateY(20px); }
+
+        /* Preloader */
+        #preloader { transition: opacity 0.8s ease-in-out; }
+        
+        /* Underline Hover FX */
+        .hover-underline { position: relative; }
+        .hover-underline::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0; background-color: #FFB7C5; transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); }
+        .hover-underline:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+        /* Info Cards */
+        .info-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(6px);
+        }
+        .pulse-dot {
+            box-shadow: 0 0 0 0 rgba(255, 183, 197, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 183, 197, 0.45); }
+            70% { box-shadow: 0 0 0 12px rgba(255, 183, 197, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 183, 197, 0); }
+        }
+    </style>
+</head>
+<body class="selection:bg-vespink selection:text-pureblack">
+
+    <!-- Custom Cursor DOM -->
+    <div id="cursor-dot" class="hidden md:block"></div>
+    <div id="cursor-follower" class="hidden md:block"></div>
+
+    <div class="film-grain"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 bg-pureblack z-[99999] flex items-center justify-center">
+        <div class="overflow-hidden">
+            <h1 id="loader-text" class="text-3xl md:text-5xl font-black uppercase tracking-[0.4em] translate-y-full transition-transform duration-700 ease-out text-white">
+                Vesperix<span class="text-vespink">.</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="fixed w-full top-0 z-[9000] mix-blend-difference py-5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
+        <a href="#" data-target="home-page" class="nav-link text-xl md:text-2xl font-black tracking-widest uppercase hover-underline interactive-link">
+            Vesperix<span class="text-vespink">.</span>
+        </a>
+        <button id="menu-btn" class="text-white hover:opacity-70 transition-opacity interactive-link p-2">
+            <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="1.5" fill="white"/>
+                <rect y="10.5" width="24" height="1.5" fill="white"/>
+            </svg>
+        </button>
+    </header>
+
+    <!-- FULLSCREEN MENU OVERLAY -->
+    <div id="full-menu" class="fixed inset-0 bg-pureblack z-[9999] translate-y-[-100%] transition-transform duration-[0.8s] cubic-bezier(0.77, 0, 0.175, 1) flex flex-col justify-between px-8 py-12 md:p-20">
+        <div class="flex justify-between items-center border-b border-white/10 pb-6">
+            <span class="text-xs uppercase tracking-widest text-graytext">Navigation</span>
+            <button id="close-menu" class="text-white hover:text-vespink transition-colors text-sm uppercase tracking-widest interactive-link">Close [X]</button>
+        </div>
+        
+        <nav class="flex flex-col gap-6 md:gap-10 mt-10">
+            <a href="#" data-target="home-page" class="nav-link-mobile interactive-link text-5xl md:text-7xl font-black uppercase tracking-tighter hover:text-vespink transition-colors w-max group">
+                <span class="text-outline group-hover:text-transparent transition-colors">01.</span> Home
+            </a>
+            <a href="#" data-target="shop-page" class="nav-link-mobile interactive-link text-5xl md:text-7xl font-black uppercase tracking-tighter hover:text-vespink transition-colors w-max group">
+                <span class="text-outline group-hover:text-transparent transition-colors">02.</span> Archive
+            </a>
+            <a href="#" data-target="contact-page" class="nav-link-mobile interactive-link text-5xl md:text-7xl font-black uppercase tracking-tighter hover:text-vespink transition-colors w-max group">
+                <span class="text-outline group-hover:text-transparent transition-colors">03.</span> Contact
+            </a>
+        </nav>
+
+        <div class="mt-auto pt-10 flex gap-6 text-xs uppercase tracking-[0.2em] text-graytext">
+            <a href="https://www.instagram.com/vesperix.id" target="_blank" class="hover:text-white interactive-link">Instagram</a>
+            <a href="#" class="hover:text-white interactive-link">Shopee</a>
+            <a href="https://wa.me/6287882518531" class="hover:text-white interactive-link">WhatsApp</a>
+        </div>
+    </div>
+
+    <main id="app">
+
+        <!-- ==========================================
+             PAGE 1: THE HOME (PARALLAX EXPERIENCE)
+        =========================================== -->
+        <div id="home-page" class="page active aurora-bg">
+            
+            <section class="relative h-screen-dvh w-full flex items-end pb-12 px-6 md:px-12 overflow-hidden scanlines">
+                <!-- Parallax Hero Image -->
+                <div class="absolute inset-0 w-full h-[120%] -top-[10%] bg-pureblack" id="hero-img-container">
+                    <img src="https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=1500" onerror="this.src='https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=1500'" class="w-full h-full object-cover object-top opacity-60" alt="Vesperix Hero">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-pureblack via-pureblack/60 to-transparent"></div>
+                <div class="glow-ring"></div>
+
+                <div class="absolute top-24 md:top-28 left-6 md:left-12 flex items-center gap-3">
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-graytext">Drop Status</span>
+                    <span class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white">
+                        <span class="w-2 h-2 rounded-full bg-vespink block pulse-dot"></span> Live Now
+                    </span>
+                </div>
+
+                <div class="absolute bottom-6 right-6 md:right-12 text-[10px] uppercase tracking-[0.4em] text-graytext">
+                    Scroll
+                </div>
+
+                <div class="relative z-10 w-full">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between w-full">
+                        <div class="glide-up">
+                            <span class="text-vespink text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Vol 1 & Vol 2 Drops</span>
+                            <h1 class="text-[12vw] md:text-[9vw] font-black uppercase leading-[0.85] tracking-tighter">
+                                Beyond <br>The <span class="text-outline">Noise.</span>
+                            </h1>
+                        </div>
+                        <div class="mt-8 md:mt-0 max-w-xs glide-up" style="transition-delay: 200ms;">
+                            <p class="text-xs text-gray-400 uppercase tracking-widest leading-relaxed mb-6">
+                                Clothing brand streetwear dari Bekasi Babelan. Menghadirkan baju boxy/boxy tee premium untuk yang berani tampil beda.
+                            </p>
+                            <a href="#" data-target="shop-page" class="nav-link interactive-link inline-flex items-center gap-3 border border-white/20 px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-pureblack transition-all">
+                                Explore Archive <span class="text-lg">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-12 md:py-16 bg-pureblack">
+                <div class="max-w-[1600px] mx-auto px-4 md:px-12">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="info-card p-6 glide-up">
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-graytext">Fabric</span>
+                            <h3 class="text-xl font-black uppercase tracking-tight mt-3">Heavy Cotton 24s</h3>
+                            <p class="text-sm text-gray-400 mt-2">240 gsm, breathable, built for daily wear.</p>
+                        </div>
+                        <div class="info-card p-6 glide-up" style="transition-delay: 100ms;">
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-graytext">Fit</span>
+                            <h3 class="text-xl font-black uppercase tracking-tight mt-3">Boxy &amp; Relaxed</h3>
+                            <p class="text-sm text-gray-400 mt-2">True to size for boxy feel, size up for oversized.</p>
+                        </div>
+                        <div class="info-card p-6 glide-up" style="transition-delay: 200ms;">
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-graytext">Shipping</span>
+                            <h3 class="text-xl font-black uppercase tracking-tight mt-3">Ready to Ship</h3>
+                            <p class="text-sm text-gray-400 mt-2">Order via WhatsApp, fast response &amp; tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-24 md:py-40 bg-pureblack">
+                <div class="max-w-[1600px] mx-auto px-4 md:px-12 flex flex-col gap-32">
+                    
+                    <!-- Look 1: VOL 1 -->
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+                        <div class="w-full md:w-3/5 group cursor-pointer glide-up interactive-view" onclick="openDetail('vol1-black')">
+                            <div class="img-container relative aspect-[3/4] md:aspect-[4/5] w-full bg-offblack">
+                                <div class="img-overlay flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-700 translate-y-4 group-hover:translate-y-0">Discover</span>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000&q=80" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000&q=80'" class="w-full h-full object-cover object-top" alt="Vol 1">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-2/5 glide-up">
+                            <span class="text-graytext text-xs tracking-[0.3em] uppercase mb-4 block">Collection // Vol 01</span>
+                            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">The <br><span class="text-outline text-white group-hover:text-vespink transition-colors">Origin</span></h2>
+                            <p class="text-sm font-light leading-loose text-gray-400 mb-8 max-w-sm">
+                                Koleksi pertama yang mendefinisikan Vesperix. Sablon raksasa dengan tipografi Arabic "خائن في الصداقة" (Traitor in friendship). Gelap dan brutal.
+                            </p>
+                            <button onclick="openDetail('vol1-black')" class="interactive-link text-xs font-bold uppercase tracking-[0.2em] border border-white/20 px-8 py-4 hover:bg-white hover:text-pureblack transition-all">
+                                View Vol. 1
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Look 2: VOL 2 -->
+                    <div class="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-center">
+                        <div class="w-full md:w-3/5 group cursor-pointer glide-up interactive-view" onclick="openDetail('vol2-white')">
+                            <div class="img-container relative aspect-[3/4] md:aspect-[4/5] w-full bg-offblack">
+                                <div class="img-overlay flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-700 translate-y-4 group-hover:translate-y-0">Discover</span>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=1000&q=80" onerror="this.src='https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=1000&q=80'" class="w-full h-full object-cover object-top" alt="Vol 2">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-2/5 md:text-right glide-up">
+                            <span class="text-graytext text-xs tracking-[0.3em] uppercase mb-4 block">Collection // Vol 02</span>
+                            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">Inner <br><span class="text-outline text-white">Voice</span></h2>
+                            <p class="text-sm font-light leading-loose text-gray-400 mb-8 max-w-sm ml-auto">
+                                Desain cursive terbaru dipadukan dengan pesan pemberontakan di bagian belakang. Dibuat agar kamu berhenti mendengarkan opini bising orang lain.
+                            </p>
+                            <button onclick="openDetail('vol2-white')" class="interactive-link text-xs font-bold uppercase tracking-[0.2em] border border-white/20 px-8 py-4 hover:bg-white hover:text-pureblack transition-all">
+                                View Vol. 2
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ==========================================
+             PAGE 2: THE ARCHIVE (KATALOG)
+        =========================================== -->
+        <div id="shop-page" class="page pt-32 pb-32 min-h-screen bg-pureblack">
+            <div class="max-w-[1600px] mx-auto px-4 md:px-12">
+                
+                <div class="mb-16 glide-up">
+                    <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-4">The <span class="text-outline text-white">Archive.</span></h1>
+                    
+                    <!-- Tabs Filter Interaktif -->
+                    <div class="flex gap-8 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] border-b border-white/10 pb-0 mt-8 relative">
+                        <button class="filter-btn interactive-link active pb-4 text-white" data-filter="all">All Items</button>
+                        <button class="filter-btn interactive-link text-graytext hover:text-white pb-4 transition-colors" data-filter="vol1">Vol. 1</button>
+                        <button class="filter-btn interactive-link text-graytext hover:text-white pb-4 transition-colors" data-filter="vol2">Vol. 2</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-6" id="product-grid">
+                    
+                    <!-- VOL 1 BLACK -->
+                    <div class="product-item group cursor-pointer glide-up interactive-view" data-category="vol1" onclick="openDetail('vol1-black')">
+                        <div class="img-container relative aspect-[4/5] bg-offblack mb-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0 z-10">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover z-0">
+                        </div>
+                        <h4 class="text-sm font-black uppercase tracking-widest">Vol 1 Boxy - Black</h4>
+                        <p class="text-vespink text-[10px] tracking-[0.2em] mt-2 font-bold">IDR 150.000</p>
+                    </div>
+
+                    <!-- VOL 1 WHITE -->
+                    <div class="product-item group cursor-pointer glide-up interactive-view" style="transition-delay: 100ms;" data-category="vol1" onclick="openDetail('vol1-white')">
+                        <div class="img-container relative aspect-[4/5] bg-offblack mb-4">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0 z-10">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover z-0">
+                        </div>
+                        <h4 class="text-sm font-black uppercase tracking-widest">Vol 1 Boxy - White</h4>
+                        <p class="text-vespink text-[10px] tracking-[0.2em] mt-2 font-bold">IDR 150.000</p>
+                    </div>
+
+                    <!-- VOL 2 BLACK -->
+                    <div class="product-item group cursor-pointer glide-up interactive-view" style="transition-delay: 200ms;" data-category="vol2" onclick="openDetail('vol2-black')">
+                        <div class="img-container relative aspect-[4/5] bg-offblack mb-4">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0 z-10">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover z-0">
+                        </div>
+                        <h4 class="text-sm font-black uppercase tracking-widest">Vol 2 Boxy - Black</h4>
+                        <p class="text-vespink text-[10px] tracking-[0.2em] mt-2 font-bold">IDR 150.000</p>
+                    </div>
+
+                    <!-- VOL 2 WHITE -->
+                    <div class="product-item group cursor-pointer glide-up interactive-view" style="transition-delay: 300ms;" data-category="vol2" onclick="openDetail('vol2-white')">
+                        <div class="img-container relative aspect-[4/5] bg-offblack mb-4">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0 z-10">
+                            <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=800&q=80'" class="absolute inset-0 w-full h-full object-cover z-0">
+                        </div>
+                        <h4 class="text-sm font-black uppercase tracking-widest">Vol 2 Boxy - White</h4>
+                        <p class="text-vespink text-[10px] tracking-[0.2em] mt-2 font-bold">IDR 150.000</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ==========================================
+             PAGE 3: PRODUCT DETAIL
+        =========================================== -->
+        <div id="detail-page" class="page pt-24 pb-32">
+            <div class="max-w-[1400px] mx-auto px-4 md:px-12">
+                <button data-target="shop-page" class="nav-link interactive-link mb-10 text-[10px] font-bold uppercase tracking-[0.3em] text-graytext hover:text-white flex items-center gap-2 hover-underline w-max">
+                    [ Back to Archive ]
+                </button>
+
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                    <!-- Foto Produk -->
+                    <div class="w-full lg:w-1/2 glide-up">
+                        <div class="img-container aspect-[4/5] bg-offblack mb-4 interactive-view">
+                            <img id="detail-img-1" src="" class="w-full h-full object-cover" alt="Detail">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="img-container aspect-square bg-offblack interactive-view cursor-pointer">
+                                <img id="detail-img-2" src="" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity">
+                            </div>
+                            <div class="img-container aspect-square bg-offblack interactive-view cursor-pointer">
+                                <img id="detail-img-3" src="" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Area Kanan -->
+                    <div class="w-full lg:w-1/2 flex flex-col pt-4 glide-up" style="transition-delay: 150ms;">
+                        <span id="detail-category" class="text-vespink text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Vesperix Collection</span>
+                        <h1 id="detail-title" class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-4">Produk Name</h1>
+                        <p id="detail-price" class="text-xl font-light text-white tracking-widest mb-8 border-b border-white/10 pb-8">IDR 150.000</p>
+
+                        <div id="detail-desc" class="mb-8 text-sm leading-loose text-gray-400 font-light">
+                            Deskripsi produk di sini.
+                        </div>
+
+                        <!-- Fit + Fabric -->
+                        <div class="mb-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="border border-white/10 p-5">
+                                    <span class="text-[10px] uppercase tracking-[0.3em] text-graytext block mb-3">Fit Note</span>
+                                    <p id="detail-fit" class="text-sm text-gray-300 leading-relaxed">Boxy fit, slightly oversized on body.</p>
+                                </div>
+                                <div class="border border-white/10 p-5">
+                                    <span class="text-[10px] uppercase tracking-[0.3em] text-graytext block mb-3">Fabric</span>
+                                    <p id="detail-fabric" class="text-sm text-gray-300 leading-relaxed">Heavy cotton 24s, 240 gsm. Soft handfeel, durable.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Drop Story -->
+                        <div class="mb-10">
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-graytext block mb-3">Drop Story</span>
+                            <p id="detail-story" class="text-sm text-gray-400 leading-loose font-light">Cerita singkat koleksi di sini.</p>
+                        </div>
+
+                        <!-- Care Instructions -->
+                        <div class="mb-12">
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-graytext block mb-3">Care Instructions</span>
+                            <p id="detail-care" class="text-sm text-gray-400 leading-loose font-light">Care instructions di sini.</p>
+                        </div>
+
+                        <!-- Size Chart -->
+                        <div class="mb-12">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-graytext">Size Chart (cm)</span>
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-graytext">Boxy Tee</span>
+                            </div>
+                            <div class="overflow-x-auto border border-white/10">
+                                <table class="min-w-full text-left text-[11px] uppercase tracking-[0.2em]">
+                                    <thead class="bg-white/5">
+                                        <tr>
+                                            <th class="py-3 px-4 font-bold text-gray-300">Size</th>
+                                            <th class="py-3 px-4 font-bold text-gray-300">Chest</th>
+                                            <th class="py-3 px-4 font-bold text-gray-300">Length</th>
+                                            <th class="py-3 px-4 font-bold text-gray-300">Sleeve</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-400">
+                                        <tr class="border-t border-white/10">
+                                            <td class="py-3 px-4 font-bold text-white">S</td>
+                                            <td class="py-3 px-4">52</td>
+                                            <td class="py-3 px-4">70</td>
+                                            <td class="py-3 px-4">22</td>
+                                        </tr>
+                                        <tr class="border-t border-white/10">
+                                            <td class="py-3 px-4 font-bold text-white">M</td>
+                                            <td class="py-3 px-4">55</td>
+                                            <td class="py-3 px-4">73</td>
+                                            <td class="py-3 px-4">23</td>
+                                        </tr>
+                                        <tr class="border-t border-white/10">
+                                            <td class="py-3 px-4 font-bold text-white">L</td>
+                                            <td class="py-3 px-4">58</td>
+                                            <td class="py-3 px-4">76</td>
+                                            <td class="py-3 px-4">24</td>
+                                        </tr>
+                                        <tr class="border-t border-white/10">
+                                            <td class="py-3 px-4 font-bold text-white">XL</td>
+                                            <td class="py-3 px-4">61</td>
+                                            <td class="py-3 px-4">79</td>
+                                            <td class="py-3 px-4">25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-[10px] text-graytext uppercase tracking-[0.2em] mt-3">Tolerance +/- 1-2 cm</p>
+                        </div>
+
+                        <!-- Ukuran -->
+                        <div class="mb-12">
+                            <div class="flex justify-between items-end mb-4">
+                                <span class="text-[10px] uppercase tracking-[0.2em] text-graytext">Select Size</span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button class="interactive-link border border-white/20 py-4 text-xs font-bold uppercase hover:bg-white hover:text-pureblack transition-all">S</button>
+                                <button class="interactive-link border border-white/20 py-4 text-xs font-bold uppercase hover:bg-white hover:text-pureblack transition-all">M</button>
+                                <button class="interactive-link bg-white text-pureblack border border-white py-4 text-xs font-bold uppercase">L</button>
+                                <button class="interactive-link border border-white/20 py-4 text-xs font-bold uppercase hover:bg-white hover:text-pureblack transition-all">XL</button>
+                            </div>
+                        </div>
+
+                        <!-- Tombol Beli -->
+                        <div class="flex flex-col gap-4 mt-auto">
+                            <a href="https://wa.me/6287882518531" target="_blank" class="interactive-link w-full bg-vespink text-pureblack text-center py-6 text-xs font-black uppercase tracking-[0.3em] hover:bg-white transition-colors relative overflow-hidden group">
+                                <span class="relative z-10">Purchase via WhatsApp</span>
+                            </a>
+                            <a href="#" class="interactive-link w-full border border-white/20 text-center py-6 text-xs font-bold uppercase tracking-[0.3em] hover:border-white transition-colors text-gray-300">
+                                Shopee Checkout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             PAGE 4: CONTACT
+        =========================================== -->
+        <div id="contact-page" class="page pt-32 pb-32 min-h-screen">
+            <div class="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row h-full gap-16 md:gap-8 items-center">
+                
+                <div class="w-full md:w-1/2 glide-up">
+                    <h1 class="text-6xl md:text-[10vw] font-black uppercase tracking-tighter leading-[0.8] mb-6">
+                        Say <br><span class="text-outline text-white hover:text-vespink transition-colors">Hello.</span>
+                    </h1>
+                    <p class="text-graytext text-sm md:text-base font-light tracking-widest uppercase max-w-sm">
+                        Pertanyaan, kolaborasi, atau sekadar menyapa? Hubungi kami lewat jalur bawah tanah.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/2 flex flex-col gap-10 glide-up" style="transition-delay: 200ms;">
+                    <div class="border-t border-white/20 pt-6 group">
+                        <span class="text-[10px] text-vespink uppercase tracking-[0.3em] font-bold block mb-2">Direct Message</span>
+                        <a href="https://wa.me/6287882518531" class="interactive-link text-3xl md:text-5xl font-black uppercase tracking-tighter group-hover:text-vespink transition-colors">+62 878-8251-8531</a>
+                    </div>
+                    
+                    <div class="border-t border-white/20 pt-6 group">
+                        <span class="text-[10px] text-vespink uppercase tracking-[0.3em] font-bold block mb-2">Social Hub</span>
+                        <a href="https://instagram.com/vesperix.id" target="_blank" class="interactive-link text-3xl md:text-5xl font-black uppercase tracking-tighter group-hover:text-vespink transition-colors">@vesperix.id</a>
+                    </div>
+
+                    <div class="border-t border-b border-white/20 py-6 flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] text-vespink uppercase tracking-[0.3em] font-bold block mb-2">Headquarters</span>
+                            <p class="text-xl md:text-2xl font-black uppercase tracking-tighter">Babelan, Bekasi, ID</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-[10px] text-graytext uppercase tracking-[0.3em] font-bold block mb-2">Status</span>
+                            <p class="text-xs font-bold uppercase text-white animate-pulse flex items-center gap-2 justify-end">
+                                <span class="w-2 h-2 rounded-full bg-green-500 block"></span> Online
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-pureblack py-12 border-t border-white/10 text-center">
+        <p class="text-[10px] text-graytext uppercase tracking-[0.4em]">© 2026 Vesperix ID. Based in Bekasi.</p>
+    </footer>
+
+    <!-- LOGIKA JAVASCRIPT (CURSOR, PARALLAX, SPA) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            /* --- 1. PRELOADER --- */
+            const preloader = document.getElementById('preloader');
+            const loaderText = document.getElementById('loader-text');
+            setTimeout(() => {
+                loaderText.classList.remove('translate-y-full'); 
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none'; 
+                        initGlideAnimations(); 
+                    }, 800);
+                }, 1000);
+            }, 100);
+
+            /* --- 2. CUSTOM MAGNETIC MOUSE CURSOR --- */
+            const cursorDot = document.getElementById('cursor-dot');
+            const cursorFollower = document.getElementById('cursor-follower');
+            
+            // Periksa apakah device mendukung hover (bukan touch screen)
+            if (window.matchMedia("(pointer: fine)").matches) {
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let followerX = window.innerWidth / 2;
+                let followerY = window.innerHeight / 2;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    cursorDot.style.left = mouseX + 'px';
+                    cursorDot.style.top = mouseY + 'px';
+                });
+
+                // Lerp animation untuk bikin kursor melayang lambat
+                function animateCursor() {
+                    followerX += (mouseX - followerX) * 0.15;
+                    followerY += (mouseY - followerY) * 0.15;
+                    cursorFollower.style.left = followerX + 'px';
+                    cursorFollower.style.top = followerY + 'px';
+                    requestAnimationFrame(animateCursor);
+                }
+                animateCursor();
+
+                // Logic Ganti State Kursor
+                function initCursorEvents() {
+                    document.querySelectorAll('.interactive-link').forEach(el => {
+                        el.addEventListener('mouseenter', () => document.body.classList.add('hover-link'));
+                        el.addEventListener('mouseleave', () => document.body.classList.remove('hover-link'));
+                    });
+
+                    document.querySelectorAll('.interactive-view').forEach(el => {
+                        el.addEventListener('mouseenter', () => document.body.classList.add('hover-view'));
+                        el.addEventListener('mouseleave', () => document.body.classList.remove('hover-view'));
+                    });
+                }
+                initCursorEvents(); // Jalankan pertama kali
+            }
+
+            /* --- 3. PARALLAX SCROLL EFFECT HERO --- */
+            const heroImgContainer = document.getElementById('hero-img-container');
+            window.addEventListener('scroll', () => {
+                if(window.scrollY < window.innerHeight) {
+                    // Gambar akan scroll lebih lambat dari layar (efek kedalaman 3D)
+                    let scrollValue = window.scrollY * 0.4; 
+                    heroImgContainer.style.transform = `translateY(${scrollValue}px)`;
+                }
+            });
+
+            /* --- 4. FULLSCREEN MENU --- */
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const fullMenu = document.getElementById('full-menu');
+            const mobileLinks = document.querySelectorAll('.nav-link-mobile');
+
+            menuBtn.addEventListener('click', () => { fullMenu.style.transform = 'translateY(0)'; });
+            closeMenuBtn.addEventListener('click', () => { fullMenu.style.transform = 'translateY(-100%)'; });
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fullMenu.style.transform = 'translateY(-100%)';
+                    switchPage(link.getAttribute('data-target'));
+                });
+            });
+
+            /* --- 5. GLIDE UP ANIMATION --- */
+            function initGlideAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+                    });
+                }, { threshold: 0.1 });
+                document.querySelectorAll('.glide-up').forEach(el => {
+                    el.classList.remove('visible'); // Reset
+                    observer.observe(el);
+                });
+            }
+
+            /* --- 6. SPA ROUTING --- */
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+
+            function switchPage(targetId) {
+                if(!targetId) return;
+                pages.forEach(page => page.classList.remove('active'));
+
+                setTimeout(() => {
+                    const targetPage = document.getElementById(targetId);
+                    targetPage.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                    
+                    // Re-init animasi
+                    setTimeout(initGlideAnimations, 50);
+                }, 300);
+            }
+
+            window.switchPage = switchPage;
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    switchPage(link.getAttribute('data-target'));
+                });
+            });
+
+            /* --- 7. FILTER TAB DI HALAMAN ARCHIVE --- */
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const products = document.querySelectorAll('.product-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'text-white');
+                        b.classList.add('text-graytext');
+                    });
+                    btn.classList.add('active', 'text-white');
+                    btn.classList.remove('text-graytext');
+
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    products.forEach(prod => {
+                        if (filterValue === 'all' || prod.getAttribute('data-category') === filterValue) {
+                            prod.style.display = 'block';
+                            setTimeout(() => { prod.style.opacity = '1'; prod.style.transform = 'scale(1)'; }, 50);
+                        } else {
+                            prod.style.opacity = '0'; prod.style.transform = 'scale(0.95)';
+                            setTimeout(() => { prod.style.display = 'none'; }, 500);
+                        }
+                    });
+                });
+            });
+        });
+
+        /* --- 8. DATABASE PRODUK (VOL 1 & VOL 2) --- */
+        const productData = {
+            'vol1-black': {
+                cat: "Vol 1 Drop", title: "Vol 1 <br>Black",
+                desc: "Koleksi perdana yang mendefinisikan Vesperix. Sablon raksasa dengan tipografi Arabic 'خائن في الصداقة' (Traitor in friendship). Gelap, tegas, dan tak terbantahkan.",
+                fit: "Boxy fit, relaxed shoulder. True to size for boxy feel, size up for oversized.",
+                fabric: "Heavy cotton 24s, 240 gsm. Compact knit, durable for daily wear.",
+                story: "Vol 1 adalah awal dari manifesto Vesperix. Hitam pekat, tipografi besar, dan energi keras yang menolak kompromi.",
+                care: "Wash inside out, cold water. Do not bleach. Iron low on reverse. Hang dry.",
+                img1: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1000&q=80",
+                img2: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=1000&q=80",
+                img3: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000&q=80"
+            },
+            'vol1-white': {
+                cat: "Vol 1 Drop", title: "Vol 1 <br>White",
+                desc: "Koleksi perdana di atas kanvas putih. Sablon raksasa dengan tipografi Arabic 'خائن في الصداقة'. Memberikan kontras maksimal untuk statement jalananmu.",
+                fit: "Boxy fit, relaxed shoulder. True to size for boxy feel, size up for oversized.",
+                fabric: "Heavy cotton 24s, 240 gsm. Soft handfeel with clean finish.",
+                story: "Vol 1 White memantulkan pesan yang sama kerasnya, tapi dengan kontras terang yang tajam dan clean.",
+                care: "Wash inside out, cold water. Do not bleach. Iron low on reverse. Hang dry.",
+                img1: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000&q=80",
+                img2: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1000&q=80",
+                img3: "https://images.unsplash.com/photo-1523398002811-999aa8d9511e?w=1000&q=80"
+            },
+            'vol2-black': {
+                cat: "Vol 2 Drop", title: "Vol 2 <br>Black",
+                desc: "Koleksi 'Beyond The Noise'. Menampilkan sablon cursive Vesperix di dada dan kutipan kuat 'Don't let the noise of others' opinions drown out your own inner voice.' di punggung.",
+                fit: "Boxy fit with slightly dropped shoulders. True to size for boxy feel.",
+                fabric: "Heavy cotton 24s, 240 gsm. Thick, structured, breathable.",
+                story: "Vol 2 lahir dari keheningan setelah bising. Fokus ke suara sendiri, bukan opini orang lain.",
+                care: "Wash inside out, cold water. Do not bleach. Iron low on reverse. Hang dry.",
+                img1: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1000&q=80",
+                img2: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1000&q=80",
+                img3: "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=1000&q=80"
+            },
+            'vol2-white': {
+                cat: "Vol 2 Drop", title: "Vol 2 <br>White",
+                desc: "Koleksi 'Beyond The Noise' versi terang. Menampilkan sablon cursive Vesperix di dada dan kutipan kuat penolakan opini bising di punggung. Clean yet rebellious.",
+                fit: "Boxy fit with slightly dropped shoulders. True to size for boxy feel.",
+                fabric: "Heavy cotton 24s, 240 gsm. Clean finish, soft but sturdy.",
+                story: "Vol 2 White menjaga pesan tetap keras, namun hadir dengan mood yang lebih clean dan terbuka.",
+                care: "Wash inside out, cold water. Do not bleach. Iron low on reverse. Hang dry.",
+                img1: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1000&q=80",
+                img2: "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=1000&q=80",
+                img3: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1000&q=80"
+            }
+        };
+
+        function openDetail(tipe) {
+            const data = productData[tipe];
+            if(!data) return;
+
+            document.getElementById('detail-category').innerText = data.cat;
+            document.getElementById('detail-title').innerHTML = data.title;
+            document.getElementById('detail-desc').innerHTML = data.desc;
+            document.getElementById('detail-fit').innerText = data.fit || '';
+            document.getElementById('detail-fabric').innerText = data.fabric || '';
+            document.getElementById('detail-story').innerText = data.story || '';
+            document.getElementById('detail-care').innerText = data.care || '';
+            
+            const img1 = document.getElementById('detail-img-1');
+            const img2 = document.getElementById('detail-img-2');
+            const img3 = document.getElementById('detail-img-3');
+            const fb = "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1000&q=80";
+            
+            img1.src = data.img1; img1.onerror = () => img1.src=fb;
+            img2.src = data.img2; img2.onerror = () => img2.src=fb;
+            img3.src = data.img3; img3.onerror = () => img3.src=fb;
+            
+            if (window.switchPage) {
+                window.switchPage('detail-page');
+            }
+        }
+    </script>
+</body>
+</html>
